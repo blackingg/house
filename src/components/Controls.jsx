@@ -34,22 +34,20 @@ function CameraControls({ moveCamera, cameraPositions }) {
 
 function DayNightControls({ toggleDayNight, isDay }) {
   return (
-    <div>
-      <button
-        onClick={toggleDayNight}
-        className={`absolute top-4 right-4 p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 ${
-          isDay
-            ? "bg-yellow-400 hover:bg-yellow-500"
-            : "bg-blue-900 hover:bg-blue-800"
-        }`}
-      >
-        {isDay ? (
-          <FaSun className="text-white text-2xl" />
-        ) : (
-          <FaMoon className="text-white text-2xl" />
-        )}
-      </button>
-    </div>
+    <button
+      onClick={toggleDayNight}
+      className={`p-2 rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 ${
+        isDay
+          ? "bg-blue-900 hover:bg-blue-800"
+          : "bg-yellow-400 hover:bg-yellow-500"
+      }`}
+    >
+      {isDay ? (
+        <FaMoon className="text-white text-xl" />
+      ) : (
+        <FaSun className="text-white text-xl" />
+      )}
+    </button>
   );
 }
 

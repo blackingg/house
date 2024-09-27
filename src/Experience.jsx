@@ -35,7 +35,7 @@ function Sun({ isDay }) {
         <meshStandardMaterial
           color="#FDB813"
           emissive="#FDB813"
-          emissiveIntensity={3}
+          emissiveIntensity={0.3}
           metalness={0.5}
           roughness={0.2}
         />
@@ -44,8 +44,8 @@ function Sun({ isDay }) {
         <Bloom
           luminanceThreshold={0.3}
           luminanceSmoothing={0.75}
-          intensity={0.2} // Increase intensity for stronger bloom
-          height={300} // Adjust resolution
+          intensity={0.02}
+          height={300}
         />
       </EffectComposer>
       <directionalLight
@@ -214,7 +214,7 @@ function Experience({
       />
       {removeText && (
         <div
-          className="absolute bottom-5 left-1/2 p-5 hover:scale-110 transition-all rounded-full bg-black text-white md:text-xl cursor-pointer"
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 p-5 hover:scale-110 transition-all rounded-full bg-black text-white md:text-xl cursor-pointer"
           onClick={closeClick}
         >
           <IoClose />
